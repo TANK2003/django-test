@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  django-exercice:
+    build: .
+    command: bash -c "pip install -r requirements.txt && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
